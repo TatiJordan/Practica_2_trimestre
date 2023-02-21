@@ -230,7 +230,49 @@ public class ObrasDeArte {
         } // for
         return existe;
     }// existe id
-    
+
+    public double calcularPrecioInicial() {
+
+        double precioInicial = 0;
+        int cargoPeso1 = 100;
+        int cargoPeso2 = 20;
+        int cargoAltura1 = 100;
+        int cargoAltura2 = 20;
+        int cargoPiezas = 10;
+
+        precioInicial = precio + (precio * COMISION_GALERIA) / 100;
+
+        System.out.println("Comision galeria: " + (precio * COMISION_GALERIA) / 100);
+
+        if (peso > 1) {
+            precioInicial += cargoPeso1;
+            System.out.println("Importe por peso(€): " + cargoPeso1);
+        } else {
+            precioInicial += cargoPeso2;
+            System.out.println("Importe por peso(€): " + cargoPeso2);
+        } // else if
+
+        if (alturaM > 2) {
+            precioInicial += cargoAltura1;
+            System.out.println("Importe por Altura(M): " + cargoAltura1);
+        } else {
+            precioInicial += cargoAltura2;
+            System.out.println("Importe por Altura(M): " + cargoAltura2);
+        } // elseif
+
+        if (piezas > 2) {
+            for (int i = 2; i < piezas; i++) {
+                precioInicial += cargoPiezas;
+                System.out.println("Importe por nº de pieza - " + i + "(€): " + cargoPiezas);
+            } // for
+        } // if
+
+        return precioInicial;
+
+    }// calcular precio incial
+
+    public abstract double calcularPrecioFinal();
+
     public int getId() {
         return id;
     }
