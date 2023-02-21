@@ -131,6 +131,22 @@ public class ObrasDeArte {
         } // ifelse
 
     }// dar de alta una obra
+
+    public static ObrasDeArte usuarioEligeObra() {
+
+        int id;
+
+        id = sc.nextInt();
+
+        ObrasDeArte obra = null;
+        for (int i = 0; i < obras.length; i++) {
+
+            if (obras[i].getId() == id) {
+                obra = obras[i];
+            } // if
+        } // for
+        return obra;
+    }// usuario elige obra
     
     public int getId() {
         return id;
