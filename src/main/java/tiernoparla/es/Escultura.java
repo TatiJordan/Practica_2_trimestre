@@ -21,4 +21,20 @@ public class Escultura extends ObrasDeArte {
     public String toString() {
         return super.toString() + " Material= " + material + "]";
     }// tostring
+    
+    @Override
+    public double calcularPrecioFinal() {
+        double precioFinal = 0;
+        int descuento = 20;
+        int cargo_manipulacion = 50;
+        double precioInicial;
+        precioInicial = super.calcularPrecioInicial();
+
+        precioFinal = (precioInicial - (precioInicial * descuento) / 100) + cargo_manipulacion;
+        System.out.println("Con descuento: " + (precioInicial * descuento) / 100);
+        System.out.println("*Avisamos de que añadiremos un cargo por manipulacion de: " + cargo_manipulacion + "€ *");
+        System.out.println("Precio final: " + precioFinal);
+
+        return precioFinal;
+    }
 }//escultura
