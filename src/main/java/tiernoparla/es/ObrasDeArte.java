@@ -184,8 +184,31 @@ public class ObrasDeArte {
         } // if else
     }// modificarObra
 
-    
+    public static void visualizarUnaObraEnConcreto() {
+        System.out.println("¿Cual es el id de la obra que quieres ver?");
 
+        ObrasDeArte obra = usuarioEligeObra();
+        obra.getId();
+        obra.getNombre();
+        obra.getAutor();
+        obra.getTipo();
+        if (obra instanceof Escultura) {
+            ((Escultura) obra).getMaterial();
+        } else if (obra instanceof Pintura) {
+            ((Pintura) obra).getTecnica();
+        } // if else
+        obra.getPrecio();
+        obra.getAlturaM();
+        obra.getPeso();
+        obra.getPiezas();
+        obra.getDescripcion();
+
+    }// visualizar una obra en concreto.
+
+    public static ObrasDeArte[] getObras() {
+        return obras;
+    }
+    
     public int getId() {
         return id;
     }
