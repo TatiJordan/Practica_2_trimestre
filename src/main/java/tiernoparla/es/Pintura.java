@@ -1,6 +1,6 @@
 package tiernoparla.es;
 
-public class Pintura {
+public class Pintura extends ObrasDeArte{
     private String tecnica;
-    
+
 }//Pintura
