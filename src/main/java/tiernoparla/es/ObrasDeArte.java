@@ -1,6 +1,8 @@
 package tiernoparla.es;
 
-public class ObrasDeArte {
+import java.util.Scanner;
+
+public abstract class ObrasDeArte {
 
     private static ObrasDeArte[] obras;
 
