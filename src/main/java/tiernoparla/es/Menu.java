@@ -12,4 +12,7 @@ public class Menu {
     private static final String OPCION_0 = "0. Salir.";
 
     private static final String MENSAJE_DE_FALLO = "La opcion elegida no es la correcta.";
+
+    public static final String[] OPCIONES_DEL_MENU = { OPCION_1, OPCION_2, OPCION_3, OPCION_4, OPCION_5, OPCION_6,
+        OPCION_0 };
 }//menu
