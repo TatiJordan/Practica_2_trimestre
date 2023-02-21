@@ -1,7 +1,7 @@
 package tiernoparla.es;
 
 public class ObrasDeArte {
-    
+
     private static ObrasDeArte[] obras;
 
     private int id;
@@ -37,7 +37,7 @@ public class ObrasDeArte {
         obras[obras.length - 1] = obra;
 
     }// añadir obras
-    
+
     private static void aumentarArray() {
         int tamañoAdicional = 1;
         ObrasDeArte arrayRespaldo[] = new ObrasDeArte[obras.length + tamañoAdicional];
@@ -48,6 +48,28 @@ public class ObrasDeArte {
         obras = arrayRespaldo;
 
     }// aumentar array
+
+    public static void crearArray() {
+
+        Pintura id_1 = new Pintura(1, "Guernica", "P.Picasso", "Pintura", "Oleo", 1000, 5, 2, 5, "Cuadro guerra civil");
+        Pintura id_2 = new Pintura(2, "La Vie", "P.Picasso", "Pintura", "Oleo", 200, 1, 1, 1, "Pintura al oleo");
+        Pintura id_3 = new Pintura(3, "El sueño", "P.Picasso", "Pintura", "Oleo", 300, 1.3, 1, 1, "Pintura al oleo");
+        Pintura id_4 = new Pintura(4, "Retrato de Dora Maar", "P.Picasso", "Pintura", "Oleo", 400, 1, 0.8, 1,
+                "Pintura al oleo");
+        Escultura id_5 = new Escultura(5, "El piel roja", "U.Checa", "Escultura", "Marmol", 350, 1, 0.8, 1,
+                "Es una escultura");
+
+        int tam = 0;
+
+        obras = new ObrasDeArte[tam];
+
+        añadirObra(id_1);
+        añadirObra(id_2);
+        añadirObra(id_3);
+        añadirObra(id_4);
+        añadirObra(id_5);
+
+    }// Crear array
 
     public int getId() {
         return id;
@@ -129,4 +151,4 @@ public class ObrasDeArte {
                 + "\n" + " Descripcion = "
                 + descripcion + "\n";
     }// toString
-}//ObrasDeArte
+}// ObrasDeArte
