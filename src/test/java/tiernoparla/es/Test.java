@@ -48,4 +48,19 @@ public class Test {
             ObrasDeArte.añadirObra(escultura);
         });
     }// id no se repita Test
+
+    // Probar que el precio sea el esperado:
+    @Test
+    void comprobarPrecio() {
+
+        int pos1 = 0, pos2 = 1, pos3 = 2;
+
+        double precioObra1 = 1332.0;
+        double precioObra2 = 261.0;
+        double precioObra3 = 373.5;
+
+        assertEquals(precioObra1, ObrasDeArte.getObras()[pos1].calcularPrecioFinal());
+        assertEquals(precioObra2, ObrasDeArte.getObras()[pos2].calcularPrecioFinal());
+        assertEquals(precioObra3, ObrasDeArte.getObras()[pos3].calcularPrecioFinal());
+    }// probarprecio
 }//Test
