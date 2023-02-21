@@ -99,4 +99,13 @@ public class ObrasDeArte {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    @Override
+    public String toString() {
+        return "ObrasDeArte" + "\n" + "[id =" + id + "\n" + " Nombre = " + nombre + "\n" + " Autor = " + autor + "\n"
+                + " Tipo = " + tipo + "\n" + " Precio = "
+                + precio + "\n" + " AlturaM = " + alturaM + "\n" + " Peso = " + peso + "\n" + " Piezas = " + piezas
+                + "\n" + " Descripcion = "
+                + descripcion + "\n";
+    }// toString
 }//ObrasDeArte
