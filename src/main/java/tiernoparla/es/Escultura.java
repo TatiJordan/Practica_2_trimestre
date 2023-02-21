@@ -1,3 +1,5 @@
+package tiernoparla.es;
+
 public class Escultura extends ObrasDeArte {
 
     private String material;
