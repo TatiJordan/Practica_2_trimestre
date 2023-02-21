@@ -1,5 +1,6 @@
 package tiernoparla.es;
 
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -33,4 +34,18 @@ public class Test {
         assertEquals(idPintura, ObrasDeArte.getObras()[posicionPintura].getId());
 
     }// añadir obras Test
+
+    @Test
+    void idRepetido() {
+
+        int idRepetido = 1;
+
+        assertEquals(true, ObrasDeArte.existeID(idRepetido));
+
+        ObrasDeArte escultura = new Escultura(idRepetido, "pintura", "cesar", "escultura", "oleo", 50, 80, 100, 5,
+                "desc1");
+        assertThrows(IllegalArgumentException.class, () -> {
+            ObrasDeArte.añadirObra(escultura);
+        });
+    }// id no se repita Test
 }//Test
