@@ -37,4 +37,4 @@ public class Pintura extends ObrasDeArte {
         System.out.println("Precio final es: " + precioFinal);
         return precioFinal;
     }
-}// Pintura
+}// Pinturas

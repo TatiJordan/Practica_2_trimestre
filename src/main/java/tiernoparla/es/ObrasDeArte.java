@@ -16,6 +16,10 @@ public abstract class ObrasDeArte {
     private int piezas;
     private String descripcion;
 
+    private final int COMISION_GALERIA = 25;
+
+    static Scanner sc = new Scanner(System.in);
+
     public ObrasDeArte(int id, String nombre, String autor, String tipo, double precio, double alturaM,
             double peso, int piezas, String descripcion) {
         this.id = id;
@@ -355,4 +359,5 @@ public abstract class ObrasDeArte {
                 + "\n" + " Descripcion = "
                 + descripcion + "\n";
     }// toString
-}// ObrasDeArte
+
+}// obras de arte
