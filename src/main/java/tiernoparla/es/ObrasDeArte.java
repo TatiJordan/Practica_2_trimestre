@@ -219,6 +219,17 @@ public class ObrasDeArte {
         System.out.println("Descripcion: " + obra.getDescripcion());
 
     }// imprimir etiquetas
+
+    public static boolean existeID(int id) {
+        boolean existe = false;
+        for (int i = 0; i < obras.length; i++) {
+
+            if (obras[i].getId() == id) {
+                existe = true;
+            } // if
+        } // for
+        return existe;
+    }// existe id
     
     public int getId() {
         return id;
