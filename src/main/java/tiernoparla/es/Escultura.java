@@ -7,4 +7,12 @@ public class Escultura extends ObrasDeArte {
         super(id, nombre, autor, tipo, precio, alturaM, pesoT, piezas, descripcion);
         this.material = material;
     }//constructor
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
 }//escultura

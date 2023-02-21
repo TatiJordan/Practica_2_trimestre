@@ -1,7 +1,7 @@
 package tiernoparla.es;
 
-public class Pintura extends ObrasDeArte{
-    
+public class Pintura extends ObrasDeArte {
+
     private String tecnica;
 
     public Pintura(int id, String nombre, String autor, String tipo, String tecnica,
@@ -10,4 +10,11 @@ public class Pintura extends ObrasDeArte{
         this.tecnica = tecnica;
     }// constructor
 
-}//Pintura
+    public String getTecnica() {
+        return tecnica;
+    }
+
+    public void setTecnica(String tecnica) {
+        this.tecnica = tecnica;
+    }
+}// Pintura
