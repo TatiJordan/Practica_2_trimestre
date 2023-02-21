@@ -28,6 +28,16 @@ public class ObrasDeArte {
 
     }// constructores
 
+    public static void añadirObra(ObrasDeArte obra) {
+
+        if (existeID(obra.getId()))
+            throw new IllegalArgumentException("El id se repite.");
+
+        aumentarArray();
+        obras[obras.length - 1] = obra;
+
+    }// añadir obras
+    
     private static void aumentarArray() {
         int tamañoAdicional = 1;
         ObrasDeArte arrayRespaldo[] = new ObrasDeArte[obras.length + tamañoAdicional];
