@@ -147,7 +147,45 @@ public class ObrasDeArte {
         } // for
         return obra;
     }// usuario elige obra
+
+    public static void modificarObra() {
+
+        System.out.println("¿Cual es el id actual de la obra que quieres modificar?");
+
+        ObrasDeArte obra = usuarioEligeObra();
+
+        System.out.println("Dime el nuevo id de la obra: ");
+        obra.setId(sc.nextInt());
+        sc.nextLine();
+        System.out.println("Dime el nuevo nombre de la obra: ");
+        obra.setNombre(sc.nextLine());
+        System.out.println("Dime el autor de la obra: ");
+        obra.setAutor(sc.nextLine());
+        System.out.println("Dime el nuevo precio: ");
+        obra.setPrecio(sc.nextDouble());
+        System.out.println("Dime la altura: ");
+        obra.setAlturaM(sc.nextDouble());
+        System.out.println("Dime el peso: ");
+        obra.setPeso(sc.nextDouble());
+        System.out.println("Dime el numero de piezas: ");
+        obra.setPiezas(sc.nextInt());
+        sc.nextLine();
+        System.out.println("¿Que quieres poner en la descripcion?");
+        obra.setDescripcion(sc.nextLine());
+        System.out.println("Dime el tipo de obra (Escultura o Pintura): ");
+        obra.setTipo(sc.nextLine());
+
+        if (obra instanceof Escultura) {
+            System.out.println("Dime que material usa: ");
+            ((Escultura) obra).setMaterial(sc.nextLine());
+        } else if (obra instanceof Pintura) {
+            System.out.println("Dime la tecnica que se usa: ");
+            ((Pintura) obra).setTecnica(sc.nextLine());
+        } // if else
+    }// modificarObra
+
     
+
     public int getId() {
         return id;
     }
