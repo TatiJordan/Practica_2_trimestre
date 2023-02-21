@@ -77,6 +77,60 @@ public class ObrasDeArte {
             System.out.println(obras[i]);
         } // for
     }// mostrar obras
+
+    public static void darDeAltaUnaObra() {
+        int id;
+        String nombre;
+        String autor;
+        String tipo;
+        String tecnica;
+        String material;
+        double precio;
+        double altura;
+        double peso;
+        int piezas;
+        String descripcion;
+
+        System.out.println("Dime el id de la obra: ");
+        id = sc.nextInt();
+        sc.nextLine();
+
+        if (existeID(id)) {
+            throw new IllegalArgumentException("El id se repite.");
+        }
+        System.out.println("Dime el nombre de la obra: ");
+        nombre = sc.nextLine();
+        System.out.println("Dime el autor de la obra: ");
+        autor = sc.nextLine();
+        System.out.println("Dime el precio: ");
+        precio = sc.nextDouble();
+        System.out.println("Dime la altura: ");
+        altura = sc.nextDouble();
+        System.out.println("Dime el peso: ");
+        peso = sc.nextDouble();
+        System.out.println("Dime el numero de piezas: ");
+        piezas = sc.nextInt();
+        sc.nextLine();
+        System.out.println("¿Que quieres poner en la descripcion?");
+        descripcion = sc.nextLine();
+        System.out.println("Dime el tipo de obra (Escultura o Pintura): ");
+        tipo = sc.nextLine();
+
+        if (tipo.equals("Pintura")) {
+            System.out.println("Dime la tecnica: ");
+            tecnica = sc.nextLine();
+            Pintura id_x = new Pintura(id, nombre, autor, tipo, tecnica, precio, altura, peso, piezas, descripcion);
+            añadirObra(id_x);
+
+        } else if (tipo.equals("Pintura")) {
+            System.out.println("Dime el material: ");
+            material = sc.nextLine();
+            Escultura id_x = new Escultura(id, nombre, autor, tipo, material, precio, altura, peso, piezas,
+                    descripcion);
+            añadirObra(id_x);
+        } // ifelse
+
+    }// dar de alta una obra
     
     public int getId() {
         return id;
