@@ -15,4 +15,8 @@ public class Escultura extends ObrasDeArte {
     public void setMaterial(String material) {
         this.material = material;
     }
+    @Override
+    public String toString() {
+        return super.toString() + " Material= " + material + "]";
+    }// tostring
 }//escultura
