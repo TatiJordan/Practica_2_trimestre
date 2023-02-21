@@ -28,6 +28,17 @@ public class ObrasDeArte {
 
     }// constructores
 
+    private static void aumentarArray() {
+        int tamañoAdicional = 1;
+        ObrasDeArte arrayRespaldo[] = new ObrasDeArte[obras.length + tamañoAdicional];
+
+        for (int i = 0; i < obras.length; i++) {
+            arrayRespaldo[i] = obras[i];
+        } // for
+        obras = arrayRespaldo;
+
+    }// aumentar array
+
     public int getId() {
         return id;
     }
