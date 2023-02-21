@@ -11,4 +11,10 @@ public class Test {
         ObrasDeArte.crearArray();
     }// crear array
 
+    @Test
+    void comprobarArray() {
+
+        assertFalse(ObrasDeArte.getObras() == null);
+
+    }// comprobar array Test
 }//Test
