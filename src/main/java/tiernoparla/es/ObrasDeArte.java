@@ -71,6 +71,13 @@ public class ObrasDeArte {
 
     }// Crear array
 
+    public static void mostrarObras() {
+
+        for (int i = 0; i < obras.length; i++) {
+            System.out.println(obras[i]);
+        } // for
+    }// mostrar obras
+    
     public int getId() {
         return id;
     }
