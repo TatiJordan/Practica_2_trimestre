@@ -208,6 +208,17 @@ public class ObrasDeArte {
     public static ObrasDeArte[] getObras() {
         return obras;
     }
+
+    public static void imprimirEtiqueta() {
+        System.out.println("Dime el id de la obra de la que quieres la etiqueta: ");
+
+        ObrasDeArte obra = usuarioEligeObra();
+
+        System.out.println("Nombre: " + obra.getNombre());
+        System.out.println("Autor: " + obra.getAutor());
+        System.out.println("Descripcion: " + obra.getDescripcion());
+
+    }// imprimir etiquetas
     
     public int getId() {
         return id;
